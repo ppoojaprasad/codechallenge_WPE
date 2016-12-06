@@ -9,6 +9,8 @@ def validIPforScanning(range,input_list):
     sys.exit()
   r= IPSet([IPNetwork(range)])  
   for i in input_list:
+    if(not i):
+      print("Input list is empty")
     if(not valid_ipv4(i)):
       print("Invalid IP addresses in the input set")
       return 
